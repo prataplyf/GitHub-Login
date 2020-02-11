@@ -22,9 +22,7 @@ def github_login():
     account_info = github.get('/user')
     if account_info.ok:
         account_info_json = account_info.json()
-        return '<h1>export OAUTHLIB_INSECURE_TRANSPORT=1<br>Your Github name is <font color="blue">{}</font>
-                    <br>Email ID <font color="blue">{}</font></h1>'.
-                    format(account_info_json['name'],account_info_json['email'])
+        return '<h1>export OAUTHLIB_INSECURE_TRANSPORT=1<br>Your Github name is <font color="blue">{}</font><br>Email ID <font color="blue">{}</font></h1>'.format(account_info_json['name'],account_info_json['email'])
     return '<h1>Request failed!</h1>'
 
 if __name__ == '__main__':
