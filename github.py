@@ -5,7 +5,7 @@ app = Flask(__name__)
 app.config['SECRET_KEY']= 'thisissecretkey'
 
 # Github client ID and client secet Key
-github_blueprint = make_github_blueprint(client_id='9bb305f241b9a27bd26b', client_secret='0e6901ae9db82af18a2bd62459b8d9d20c65a666')
+github_blueprint = make_github_blueprint(client_id='your client ID', client_secret='Your Client secret Key')
 
 app.register_blueprint(github_blueprint, url_prefix='/github_login')
 
